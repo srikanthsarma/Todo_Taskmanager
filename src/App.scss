@@ -1,0 +1,217 @@
+// variables
+$bg-color: lavender;
+$btn-color-primary: aliceblue;
+$btn-bg-primary: blueviolet;
+$btn-bg-primary-hover: rgb(131, 86, 174);
+
+//global styling
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit
+}
+
+
+//header styling
+.App-header {
+    background-color: $bg-color;
+    height: 30vh;
+    height: 30dvh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .create-task-btn {
+        color: $btn-color-primary;
+        background: $btn-bg-primary;
+        height: 2.5rem;
+        width: 8rem;
+        border: 0;
+        border-radius: 0.5rem;
+
+        &:hover {
+            background: $btn-bg-primary-hover;
+        }
+    }
+}
+
+.create-task-form {
+    height: 10rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    input {
+        height: 2rem;
+        width: 100%;
+        padding: .5rem;
+        border: none;
+        border-bottom: 2px solid lightslategray;
+
+    }
+
+}
+
+#create-button {
+    color: $btn-color-primary;
+    background-color: $btn-bg-primary;
+    height: 2.5rem;
+    width: 6rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#create-button:hover {
+    background-color: $btn-bg-primary-hover;
+}
+
+#cancel-button {
+    color: white;
+    background-color: rgb(175, 172, 172);
+    height: 2.5rem;
+    width: 6rem;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+#cancel-button:hover {
+    background-color: rgb(114, 112, 112);
+}
+
+
+//container styling
+.taskContainer {
+    min-height: 70vh;
+    min-height: 70dvh;
+    width: 100%;
+    padding: 1rem;
+    
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 40rem));
+    grid-auto-flow: row;
+    
+    
+    .Kard {
+        min-height: 20rem;
+        border-radius: 0.75rem;
+        border-top: 5px solid blueviolet;
+
+        .KardHeader {
+            padding: 0.75rem;
+            background-color: rgb(240, 232, 249);
+
+            button {
+                width: 2.5rem;
+                background-color: rgb(209, 178, 244);
+
+                position: absolute;
+                top: 1rem;
+                border: none;
+                border-radius: .25rem;
+                font-size: 1rem;
+
+                &:hover {
+                    background-color: rgb(193, 147, 246);
+                }
+
+            }
+
+            .addToDo {
+                right: 7rem;
+            }
+
+            .editTask {
+                right: 4rem;
+            }
+
+            .deleteTask {
+                right: 1rem;
+            }
+
+        }
+
+        .card-body {
+            padding: .5rem;
+
+            .todoItemsList {
+
+                .todoItems {
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    background-color: rgb(226, 212, 242);
+                    border-radius: .5rem;
+
+                    height: auto;
+                    margin: 1rem;
+                    padding: 1rem;
+
+                    .todoItem {
+                        width: 80%;
+                    }
+
+
+                    button {
+                        border: none;
+                        background-color: rgb(209, 178, 244);
+                        width: 2rem;
+                        height: 1.5rem;
+                        font-size: .8rem;
+
+                        &:hover {
+                            background-color: rgb(193, 147, 246);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .KardFooter {
+
+            height: 3rem;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            
+
+            input {
+                border: none;
+                border-bottom: 2px solid gray;
+                width: 80%;
+                padding: .25rem;
+            }
+
+            button {
+                background-color: rgb(209, 178, 244);
+                border: none;
+                border-radius: .25rem;
+                width: 3rem;
+                margin-left: 1rem;
+
+                &:hover {
+                    background-color: rgb(193, 147, 246);
+                }
+            }
+        }
+    }
+}
